@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function grid(x) {
         for (let i = 0; i < x; i++) {
             const containerRow = document.createElement('div');
+            containerRow.classList.add('rows');
             containerRow.setAttribute('style', 'display: flex; flex: auto;');
     
             for (let j = 0; j < x; j++) {
@@ -17,14 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }    
     }
 
+
+
     grid(16);
 
     button.addEventListener('click', () => {
         const input = prompt('Please enter gride size: ', '16');
-        if (+input > 0) grid(+input);
+        if (+input > 0) {
+            const rows = document.querySelectorAll('.rows');
+            rows.forEach((pixel) => {
+                pixel.remove();
+            });
+            grid(+input);
+        }
     });
 
-    div.addEventListener('mouseover', () => {
-        div.style.backgroundColor = 'black';
-    });
 });
