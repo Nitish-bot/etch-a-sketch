@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
     <style>
+        button {
+            display: block;
+            margin-bottom: 12px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .pixels {
             border: 0.1px solid #AAAAAA;
             border-collapse: collapse;
@@ -13,12 +20,14 @@
         #sketchArea {
             display: flex;
             flex-direction: column;
+            margin: auto;
             width: 900px;
             height: 900px;
         }
     </style>
 </head>
 <body>
+    <button id="gridSelector">Change grid size!</button>
     <div id="sketchArea">
 
     </div>
