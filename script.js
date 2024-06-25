@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     button.addEventListener('click', () => {
         const input = prompt('Please enter gride size: ', '16');
-        grid(+input);
+        if (+input > 0) grid(+input);
     });
 
     div.addEventListener('mouseover', () => {
