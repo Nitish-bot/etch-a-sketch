@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }    
     }
 
-
     grid(16);
 
     button.addEventListener('click', () => {
